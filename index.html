@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SPRAXXX.ai — Human-First AI • Verified Identity</title>
+  <meta name="description" content="SPRAXXX.ai is the human-first AI stack: verified identity, private assistants, and the Divine Court data model for dignity-aware systems." />
+  <meta property="og:title" content="SPRAXXX.ai — Human-First AI • Verified Identity" />
+  <meta property="og:description" content="Private by default. Verified by design. Tools for builders and protectors." />
+  <meta property="og:url" content="https://spraxxx.ai" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/assets/favicon.png" />
+
+  <style>
+    /* ------- Theme ------- */
+    :root{
+      --bg:#0b0c11; --panel:#111422; --ink:#e9f1ff; --muted:#a2b0c6;
+      --brand:#90f2ff; --brand2:#8cffc1; --ring: #90f2ff55; --danger:#ff6b6b;
+      --radius:16px; --shadow:0 12px 40px rgba(0,0,0,.35);
+      --max:1000px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, sans-serif;
+      color:var(--ink); background: radial-gradient(1200px 600px at 70% -10%, #1a1f38 0%, transparent 60%), #0b0c11;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max); margin:0 auto; padding:20px}
+    header{position:sticky; top:0; backdrop-filter: blur(8px); background: #0b0c11cc; border-bottom:1px solid #1d2336; z-index:10}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:12px}
+    .logo{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.5px}
+    .logo-badge{width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg, var(--brand), var(--brand2)); box-shadow:var(--shadow)}
+    .navlinks{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{display:inline-flex; gap:10px; align-items:center; justify-content:center; padding:12px 16px; border-radius:12px; border:1px solid #243050; background:#12162a; color:var(--ink); box-shadow: var(--shadow); transition: transform .06s ease}
+    .btn:hover{transform: translateY(-1px)}
+    .btn.primary{background:linear-gradient(135deg, #182038 0%, #101524 100%); border:1px solid #2a3a64; box-shadow: 0 0 0 6px var(--ring)}
+    .btn.ghost{background:transparent; border:1px solid #243050}
+    .chip{font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid #22304e; color:var(--muted)}
+    .hero{padding:60px 20px 20px}
+    .grid{display:grid; gap:18px}
+    .two{grid-template-columns: repeat(2, minmax(0,1fr))}
+    @media (max-width:900px){ .two{grid-template-columns:1fr} }
+    .panel{background: linear-gradient(180deg, #121627 0%, #0f1322 100%); border:1px solid #1f2946; border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+    .panel.alt{background: linear-gradient(180deg, #0f1221 0%, #0b0f1d 100%)}
+    .head{font-size: clamp(26px, 4.6vw, 48px); line-height:1.05; margin:10px 0}
+    .sub{color:var(--muted); font-size: clamp(14px, 2.2vw, 18px)}
+    .kpis{display:flex; gap:14px; flex-wrap:wrap}
+    .kpi{flex:1 1 140px; padding:12px 14px; border:1px dashed #263155; border-radius:12px; color:#c6d7ff}
+    .pillrow{display:flex; gap:8px; flex-wrap:wrap; margin:10px 0}
+    .list{display:grid; gap:10px}
+    .list li{background:#0e1325; border:1px solid #1e2b4d; padding:12px 14px; border-radius:12px}
+    .code{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background:#0b0f1e; border:1px solid #1a2647; padding:14px; border-radius:12px; overflow:auto}
+    .divider{height:1px; background: linear-gradient(90deg, transparent, #29406c, transparent); margin:24px 0}
+    footer{padding:30px 20px; color:#9fb2d8; border-top:1px solid #1a2140}
+    .tiny{font-size:12px; color:#8ea2c9}
+
+    /* Simple icon style */
+    .icon{width:18px; height:18px; display:inline-block; border-radius:4px; background: linear-gradient(135deg, var(--brand), var(--brand2)); box-shadow: inset 0 0 0 2px #0e1430, 0 0 0 1px #172046}
+  </style>
+</head>
+<body>
+  <!-- Top Nav -->
+  <header>
+    <div class="wrap nav">
+      <div class="logo">
+        <span class="logo-badge" aria-hidden="true"></span>
+        <span>SPRAXXX<span class="tiny">.ai</span></span>
+      </div>
+      <nav class="navlinks">
+        <a class="chip" href="https://spraxxx.com" target="_blank" rel="noopener">.com</a>
+        <a class="chip" href="https://spraxxx.tv" target="_blank" rel="noopener">.tv</a>
+        <a class="chip" href="#contact">Contact</a>
+        <a class="btn ghost" href="#docs">Docs</a>
+        <a class="btn primary" href="#launch">Launch Studio</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="wrap hero">
+    <div class="grid two">
+      <div class="panel">
+        <div class="pillrow">
+          <span class="chip">Private by default</span>
+          <span class="chip">Verified by design</span>
+          <span class="chip">Human-first AI</span>
+        </div>
+        <h1 class="head">Identity-grade AI tools for builders, advocates, and communities.</h1>
+        <p class="sub">SPRAXXX.ai ships an opinionated stack: Verified Identity, Private Assistants, and the <strong>Divine Court</strong> data model to reason about dignity, harm, and restitution—without selling your soul to adtech.</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
+          <a class="btn primary" id="launch" href="/app" aria-label="Launch the SPRAXXX AI Studio (placeholder)">Launch Studio</a>
+          <a class="btn" href="#pricing">Get Access</a>
+          <a class="btn ghost" href="#roadmap">Roadmap</a>
+        </div>
+        <div class="kpis" style="margin-top:14px">
+          <div class="kpi"><strong>0 trackers</strong><br/><span class="tiny">No 3rd-party analytics</span></div>
+          <div class="kpi"><strong>100% portable</strong><br/><span class="tiny">Static-first deployment</span></div>
+          <div class="kpi"><strong>Verified email</strong><br/><span class="tiny">Trust-by-design inbox</span></div>
+        </div>
+      </div>
+
+      <!-- Product Cards -->
+      <div class="grid">
+        <div class="panel alt">
+          <h3 style="margin:8px 0; display:flex; align-items:center; gap:10px"><span class="icon" aria-hidden="true"></span> Identity Oracle</h3>
+          <p class="sub">One identity, zero creep. Issue verifiable credentials for people and projects. Works offline-friendly, QR-first, and proof-portable.</p>
+          <div class="code">POST /v1/credentials/issue<br/>GET  /v1/credentials/verify</div>
+        </div>
+        <div class="panel alt">
+          <h3 style="margin:8px 0; display:flex; align-items:center; gap:10px"><span class="icon" aria-hidden="true"></span> Dignity Degradation Index (DDI)</h3>
+          <p class="sub">Quantify harm without dehumanizing the harmed. Structured testimonies map to severity, restitution, and accountability pathways.</p>
+          <ul class="list">
+            <li>Schema: <code>case → events → signals → severity</code></li>
+            <li>Evidence hashing &amp; time-stamping</li>
+            <li>Appeals &amp; counter-claims ledger</li>
+          </ul>
+        </div>
+        <div class="panel alt">
+          <h3 style="margin:8px 0; display:flex; align-items:center; gap:10px"><span class="icon" aria-hidden="true"></span> Private Assistants</h3>
+          <p class="sub">Local-first agents that remember what you ask them to—and nothing else. Exportable memory, encrypted sync, human override.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- Developer First -->
+  <section id="docs" class="wrap">
+    <div class="grid two">
+      <div class="panel">
+        <h2 class="head" style="font-size:28px">Build with SPRAXXX.ai</h2>
+        <p class="sub">Simple HTTP APIs. No SDK lock-in. Start with cURL, graduate to whatever stack you love.</p>
+        <div class="code" aria-label="API example">
+curl -X POST https://api.spraxxx.ai/v1/credentials/issue \
+ -H "Authorization: Bearer &lt;token&gt;" \
+ -H "Content-Type: application/json" \
+ -d '{
+   "subject":"did:spraxxx:123",
+   "claims":{"name":"Maple","role":"Ministry content creation laborer"},
+   "expiry":"2026-12-31"
+ }'
+        </div>
+        <p class="tiny">Note: API host is a placeholder. Wire it when your backend is ready.</p>
+      </div>
+      <div class="panel">
+        <h3 style="margin-top:0">Guardrails that matter</h3>
+        <ul class="list">
+          <li><strong>Identity-first:</strong> Use signed attestations, not vibes.</li>
+          <li><strong>Proof trails:</strong> Content fingerprints &amp; immutable receipts.</li>
+          <li><strong>Human override:</strong> Appeals out-rank automation.</li>
+          <li><strong>Zero marketing pixels:</strong> Your people aren’t ad inventory.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- Pricing (Different from .com/.tv) -->
+  <section id="pricing" class="wrap">
+    <div class="grid two">
+      <div class="panel">
+        <h2 class="head" style="font-size:28px">Access</h2>
+        <p class="sub">We keep pricing boring, honest, and easy to explain at a bus stop.</p>
+        <div class="grid">
+          <div class="panel alt">
+            <h3 style="margin-top:0">Builder Pass</h3>
+            <p>For devs &amp; advocates shipping real things.</p>
+            <ul class="list">
+              <li>API keys (rate-limited)</li>
+              <li>Credential issuing sandbox</li>
+              <li>1 private assistant profile</li>
+            </ul>
+            <a class="btn primary" href="https://buy.stripe.com/9B68wOfP03ZueUYbY18IU03">Get Builder Pass</a>
+          </div>
+          <div class="panel alt">
+            <h3 style="margin-top:0">Steward Pass</h3>
+            <p>For orgs, clinics, shelters, and community stewards.</p>
+            <ul class="list">
+              <li>Higher limits &amp; audit exports</li>
+              <li>DDI casework workspace</li>
+              <li>Priority support</li>
+            </ul>
+            <a class="btn" href="https://buy.stripe.com/7sY28q6eq8fK148fad8IU04">Get Steward Pass</a>
+          </div>
+        </div>
+        <p class="tiny" style="margin-top:10px">Stripe links are live per your earlier mapping. Swap anytime.</p>
+      </div>
+
+      <div class="panel">
+        <h2 class="head" style="font-size:28px">What’s different on .ai?</h2>
+        <ul class="list">
+          <li><strong>Focus:</strong> Identity + APIs + data models (not media hosting).</li>
+          <li><strong>Language:</strong> Plain talk for builders and caseworkers.</li>
+          <li><strong>Pledge:</strong> No surveillance, no resale, no “growth hacks.”</li>
+        </ul>
+        <div class="panel" style="margin-top:10px">
+          <h4 style="margin:0 0 6px 0">Roadmap Highlights</h4>
+          <ul class="list">
+            <li>🔒 Encrypted case bundles (shareable with courts)</li>
+            <li>🧾 Verifiable receipts for testimony uploads</li>
+            <li>🧭 Assistant “ethics modes” (Court / Clinic / Outreach)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- Contact -->
+  <section id="contact" class="wrap">
+    <div class="grid two">
+      <form class="panel" action="https://formspree.io/f/xyzdaqzl" method="POST">
+        <h2 class="head" style="font-size:28px">Say hello</h2>
+        <p class="sub">Tell us what you’re building or the harm you’re trying to prevent. We answer like humans.</p>
+        <label class="tiny">Your Name</label>
+        <input name="name" required placeholder="Jane Doe" style="margin:6px 0 12px 0; width:100%; padding:12px; border-radius:12px; border:1px solid #27365c; background:#0e1325; color:var(--ink)" />
+        <label class="tiny">Email</label>
+        <input name="email" type="email" required placeholder="you@example.com" style="margin:6px 0 12px 0; width:100%; padding:12px; border-radius:12px; border:1px solid #27365c; background:#0e1325; color:var(--ink)" />
+        <label class="tiny">Message</label>
+        <textarea name="message" required rows="5" placeholder="Quick note…" style="margin:6px 0 12px 0; width:100%; padding:12px; border-radius:12px; border:1px solid #27365c; background:#0e1325; color:var(--ink)"></textarea>
+        <button class="btn primary" type="submit">Send</button>
+        <p class="tiny">Protected by Formspree. We don’t sell your info. Ever.</p>
+      </form>
+
+      <div class="panel alt">
+        <h3 style="margin-top:0">Fair Use Covenant</h3>
+        <p class="sub">We’ll fight for your dignity. We won’t fight for your spyware. If you sell people out, we’ll sell you nothing.</p>
+        <ul class="list">
+          <li>No scraping human pain for profit.</li>
+          <li>No targeted harm or harassment tooling.</li>
+          <li>Appeals welcome. Accountability first.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap">
+        <div class="tiny">© <span id="y"></span> SPRAXXX — All rights reserved. Built with love and receipts.</div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <a class="tiny" href="/legal">Legal</a>
+          <a class="tiny" href="/privacy">Privacy</a>
+          <a class="tiny" href="/status">Status</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // simple current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
