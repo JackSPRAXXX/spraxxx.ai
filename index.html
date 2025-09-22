@@ -2,287 +2,301 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>SPRAXXX.ai — Human-First AI • Verified Identity</title>
+  <title>SPRAXXX.ai — Brotherhood Intelligence</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="SPRAXXX.ai is the human-first AI stack: verified identity, private assistants, SPX coin, and a dignity-aware data model." />
-  <meta name="theme-color" content="#0a0c0e" />
+  <meta name="description" content="SPRAXXX.ai — IAM Companion, verified identity, and the Nation’s dignity-aware AI. Purple noir, cedar spirit." />
+  <meta name="theme-color" content="#0b0a10" />
   <link rel="icon" href="/assets/favicon.png" />
-  <link rel="canonical" href="https://spraxxx.ai/" />
 
   <!-- OG / Twitter -->
-  <meta property="og:title" content="SPRAXXX.ai — Human-First AI • Verified Identity" />
-  <meta property="og:description" content="Private by default. Verified by design. Tools for builders and stewards." />
+  <meta property="og:title" content="SPRAXXX.ai — Brotherhood Intelligence" />
+  <meta property="og:description" content="Verify once, belong forever. Identity • AI • SPX coin • Theaters." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://spraxxx.ai/" />
   <meta property="og:image" content="/assets/og-ai.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SPRAXXX.ai — Human-First AI • Verified Identity" />
-  <meta name="twitter:description" content="Cedar-rooted AI. Verify once, belong forever." />
-  <meta name="twitter:image" content="/assets/og-ai.jpg" />
 
-  <!-- Security (advisory for static hosting) -->
-  <meta http-equiv="x-content-type-options" content="nosniff" />
-  <meta http-equiv="x-frame-options" content="SAMEORIGIN" />
+  <style>
+    /* ===== SPRAXXX.ai — Purple Noir (inspired by .TV layout, purple accent) ===== */
+    :root{
+      --bg:#0b0a10;            /* black-violet base */
+      --panel:#0f0d17;         /* card panel */
+      --edge:#1a1530;          /* borders */
+      --ink:#ffffff;           /* primary text */
+      --muted:#bdb7d6;         /* secondary text */
+      --purple:#8a5cff;        /* royal purple accent */
+      --purple-2:#b08cff;      /* soft purple */
+      --neon:#a86bff;          /* neon glow */
+      --danger:#ff3b3b;        /* optional red */
+      --r:14px;
+      --shadow:0 12px 40px rgba(0,0,0,.40);
+      --ring:0 0 0 6px rgba(138,92,255,.22);
+      --max:1060px;
+    }
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 500px at 75% -10%, rgba(138,92,255,.15), transparent 55%),
+        radial-gradient(900px 400px at 10% -10%, rgba(176,140,255,.10), transparent 60%),
+        var(--bg);
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    }
+    a{color:var(--purple-2);text-decoration:none}
+    a:hover{text-decoration:underline}
 
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"SPRAXXX.ai",
-    "url":"https://spraxxx.ai/",
-    "logo":"https://spraxxx.ai/assets/favicon.png",
-    "sameAs":["https://spraxxx.com","https://spraxxx.tv","https://spraxxx.net"]
-  }
-  </script>
+    /* Layout */
+    .wrap{max-width:var(--max);margin:0 auto;padding:20px}
+    .grid{display:grid;gap:16px}
+    .two{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media (max-width:900px){.two{grid-template-columns:1fr}}
+
+    /* Header: banner feel like .TV but sleeker */
+    header{
+      position:sticky;top:0;z-index:10;
+      backdrop-filter:blur(6px);
+      background:linear-gradient(180deg, rgba(11,10,16,.90), rgba(11,10,16,.70), transparent);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;gap:10px;align-items:center}
+    .badge{width:34px;height:34px;border-radius:10px;
+      background:conic-gradient(from 210deg,#0e0c17,#1b1530,#0e0c17);
+      border:1px solid var(--edge); box-shadow:var(--shadow)}
+    .brand h1{margin:0;font-size:16px;letter-spacing:.6px}
+    .links{display:flex;gap:10px;flex-wrap:wrap}
+    .chip{display:inline-block;padding:7px 11px;border:1px solid var(--edge);border-radius:999px;color:var(--muted);background:#100d1a}
+    .btn{display:inline-flex;gap:10px;align-items:center;justify-content:center;padding:10px 14px;border-radius:12px;border:1px solid var(--purple);background:var(--purple);color:#0f0d17;font-weight:800;box-shadow:var(--shadow)}
+    .btn.ghost{background:transparent;color:#fff;border-color:var(--edge)}
+    .btn:hover{box-shadow:var(--ring)}
+
+    /* Section headers like .TV banners */
+    h2.section{margin:0 0 10px;padding:12px 16px;font-size:14px;letter-spacing:.6px;
+      background:linear-gradient(180deg,#120f1c,#0f0c17);border:1px solid var(--edge);border-radius:12px;color:#dcd3ff}
+
+    /* Cards / panels */
+    .panel{background:linear-gradient(180deg,var(--panel),#0c0a14 70%);border:1px solid var(--edge);border-radius:var(--r);padding:16px;box-shadow:var(--shadow)}
+    .panel.alt{background:linear-gradient(180deg,#100d1a,#0d0a15 70%)}
+    .head{font-size:clamp(26px,4.8vw,50px);line-height:1.06;margin:8px 0}
+    .sub{color:var(--muted);font-size:clamp(15px,2vw,18px)}
+    .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+    .tag{display:inline-block;font-size:12px;padding:6px 10px;border:1px solid var(--edge);border-radius:999px;color:#d8cffc;background:#120f1c}
+
+    /* Lists & code */
+    .list{display:grid;gap:10px}
+    .list li{background:#110e1b;border:1px solid #2a2242;border-radius:12px;padding:12px 14px;color:#f2ecff}
+    .code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;background:#0e0b16;border:1px solid #2a2242;border-radius:12px;padding:14px;color:#e9e1ff;overflow:auto}
+
+    /* Divider with “stage lights” */
+    .divider{height:2px;margin:22px 0;
+      background:
+        repeating-linear-gradient(90deg, rgba(138,92,255,.35) 0 10px, transparent 10px 20px),
+        linear-gradient(90deg, transparent, rgba(176,140,255,.70), transparent);}
+
+    /* Track-of-week style banners (re-usable) */
+    .banner{background:linear-gradient(180deg,#a86bff,#8a5cff);color:#120f1c;text-align:center;font-weight:900;padding:.9rem 1rem;border:1px solid #6f45ff;border-radius:12px}
+    .note{font-size:13px;color:#d6ccff;background:#120f1c;border:1px solid #2a2242;padding:10px 12px;border-radius:12px}
+
+    /* Footer */
+    footer{padding:26px 20px;color:#c9c2e6;border-top:1px solid rgba(255,255,255,.08)}
+    .tiny{font-size:12px;color:#b8b0da}
+
+    /* Focus & motion */
+    :focus-visible{outline:none;box-shadow:0 0 0 4px rgba(138,92,255,.35)}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  </style>
 </head>
 <body>
-  <a href="#main" class="skip">Skip to content</a>
-
-  <!-- Top Nav -->
-  <header role="banner">
+  <!-- Header -->
+  <header>
     <div class="wrap nav">
-      <div class="logo">
-        <span class="logo-badge" aria-hidden="true"></span>
-        <span aria-label="SPRAXXX dot AI">SPRAXXX<span class="tiny">.ai</span></span>
+      <div class="brand">
+        <div class="badge" aria-hidden="true"></div>
+        <h1>SPRAXXX.ai</h1>
       </div>
-      <nav class="navlinks" aria-label="Primary">
+      <nav class="links" aria-label="SPRAXXX links">
         <a class="chip" href="https://spraxxx.com" target="_blank" rel="noopener">.com</a>
         <a class="chip" href="https://spraxxx.tv" target="_blank" rel="noopener">.tv</a>
         <a class="chip" href="#contact">Contact</a>
         <a class="btn ghost" href="#docs">Docs</a>
-        <a class="btn primary" href="#launch">Launch Studio</a>
+        <a class="btn" href="#launch">Launch Studio</a>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <!-- HERO -->
-    <section class="wrap hero" aria-labelledby="hero-title">
-      <div class="grid two">
-        <div class="panel" role="region" aria-label="Hero pitch">
-          <div class="pillrow" aria-hidden="true">
-            <span class="chip">Private by default</span>
-            <span class="chip">Verified by design</span>
-            <span class="chip">Human-first AI</span>
-          </div>
-          <h1 id="hero-title" class="head">Identity-grade AI tools for builders, advocates, and communities.</h1>
-          <p class="sub">SPRAXXX.ai ships an opinionated stack: Verified Identity, Private Assistants, and a dignity-aware model to reason about harm and restitution — without selling your soul to adtech.</p>
-          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
-            <a class="btn primary" id="launch" href="/app" aria-label="Launch the SPRAXXX AI Studio (placeholder)">Launch Studio</a>
-            <a class="btn" href="#pricing">Get Access</a>
-            <a class="btn ghost" href="#roadmap">Roadmap</a>
-          </div>
-          <div class="kpis" style="margin-top:14px">
-            <div class="kpi"><strong>0 trackers</strong><br/><span class="tiny">No 3rd-party analytics</span></div>
-            <div class="kpi"><strong>Static-first</strong><br/><span class="tiny">Ship fast, load faster</span></div>
-            <div class="kpi"><strong>Verified email</strong><br/><span class="tiny">@spraxxx.com identity</span></div>
-          </div>
-          <p class="notice" style="margin-top:12px">Spellcatcher active: typed <strong>SPREXXX</strong> by mistake? We’ll bring you home.</p>
-        </div>
-
-        <!-- Product Cards -->
-        <div class="grid">
-          <div class="panel alt" role="region" aria-labelledby="id-oracle">
-            <h3 id="id-oracle" style="margin:8px 0; display:flex; align-items:center; gap:10px">
-              <span class="icon" aria-hidden="true"></span> Identity Oracle
-            </h3>
-            <p class="sub">One identity, zero creep. Issue verifiable credentials for people and projects. Offline-friendly, QR-first, proof-portable.</p>
-            <div class="code" aria-label="API example for credentials">
-              POST /v1/credentials/issue<br/>GET&nbsp;&nbsp;/v1/credentials/verify
-            </div>
-          </div>
-          <div class="panel alt" role="region" aria-labelledby="ddi">
-            <h3 id="ddi" style="margin:8px 0; display:flex; align-items:center; gap:10px">
-              <span class="icon" aria-hidden="true"></span> Dignity Degradation Index (DDI)
-            </h3>
-            <p class="sub">Quantify harm without dehumanizing the harmed. Structured testimonies map to severity, restitution, and accountability pathways.</p>
-            <ul class="list">
-              <li>Schema: <code>case → events → signals → severity</code></li>
-              <li>Evidence hashing &amp; time-stamping</li>
-              <li>Appeals &amp; counter-claims ledger</li>
-            </ul>
-          </div>
-          <div class="panel alt" role="region" aria-labelledby="assistants">
-            <h3 id="assistants" style="margin:8px 0; display:flex; align-items:center; gap:10px">
-              <span class="icon" aria-hidden="true"></span> Private Assistants
-            </h3>
-            <p class="sub">Local-first agents that remember what you ask them to — and nothing else. Exportable memory, encrypted sync, human override.</p>
-          </div>
-        </div>
+  <main class="wrap">
+    <!-- Hero -->
+    <section class="panel">
+      <div class="banner">🚀 SPRAXXX.AI — Purple Noir Edition</div>
+      <h1 class="head" style="margin-top:12px">Identity-grade AI for builders, advocates, and the Nation.</h1>
+      <p class="sub">Verify once, belong forever. Your <strong>IAM Companion</strong> turns dreams into blueprints, code, and movement—without surveillance bloat.</p>
+      <div class="pillrow">
+        <a class="btn" href="#companion">Meet the Companion</a>
+        <a class="btn ghost" href="#identity">Verify Identity</a>
+        <a class="btn ghost" href="#spx">SPX Coin</a>
       </div>
+      <p class="note">No phoniness. No phonetics. Just raw SPRAXXX. (Now in purple.)</p>
     </section>
 
-    <div class="wrap"><div class="divider" role="separator"></div></div>
+    <div class="divider" role="separator"></div>
 
-    <!-- DEV DOCS -->
-    <section id="docs" class="wrap" aria-labelledby="build-title">
-      <div class="grid two">
-        <div class="panel">
-          <h2 id="build-title" class="head" style="font-size:28px">Build with SPRAXXX.ai</h2>
-          <p class="sub">Simple HTTP APIs. No SDK lock-in. Start with cURL, graduate to whatever stack you love.</p>
-          <div class="code" aria-label="API example">
-<pre><code>curl -X POST https://api.spraxxx.ai/v1/credentials/issue \
- -H "Authorization: Bearer &lt;token&gt;" \
- -H "Content-Type: application/json" \
- -d '{
-   "subject":"did:spraxxx:123",
-   "claims":{"name":"Maple","role":"Ministry content creation laborer"},
-   "expiry":"2026-12-31"
- }'</code></pre>
-          </div>
-          <p class="tiny">Note: API host is a placeholder. Wire it when your backend is ready.</p>
-        </div>
-        <div class="panel">
-          <h3 style="margin-top:0">Guardrails that matter</h3>
-          <ul class="list">
-            <li><strong>Identity-first:</strong> Use signed attestations, not vibes.</li>
-            <li><strong>Proof trails:</strong> Content fingerprints &amp; immutable receipts.</li>
-            <li><strong>Human override:</strong> Appeals outrank automation.</li>
-            <li><strong>Zero marketing pixels:</strong> Your people aren’t ad inventory.</li>
-          </ul>
-        </div>
-      </div>
+    <!-- Identity / Companion cards (TV-like grid) -->
+    <h2 class="section" id="identity">IDENTITY • Verify once, belong forever</h2>
+    <section class="grid two">
+      <article class="panel">
+        <span class="tag">Stripe → Human Hello</span>
+        <h3 class="head" style="font-size:22px;margin-top:6px">Verification that feels human</h3>
+        <p class="sub">Stripe checks your ID; a real Nation Greeter calls to welcome you. You get your key. Done.</p>
+      </article>
+      <article class="panel">
+        <span class="tag">@spraxxx.com • .me inbox</span>
+        <h3 class="head" style="font-size:22px;margin-top:6px">Your Brotherhood handle</h3>
+        <p class="sub">Own your name on the wire. Clean inbox, zero adtech, straight cedar.</p>
+      </article>
     </section>
 
-    <div class="wrap"><div class="divider" role="separator"></div></div>
-
-    <!-- PRICING -->
-    <section id="pricing" class="wrap" aria-labelledby="pricing-title">
-      <div class="grid two">
-        <div class="panel">
-          <h2 id="pricing-title" class="head" style="font-size:28px">Access</h2>
-          <p class="sub">We keep pricing boring, honest, and bus-stop simple.</p>
-          <div class="grid">
-            <div class="panel alt" role="region" aria-labelledby="builder-pass">
-              <h3 id="builder-pass" style="margin-top:0">Builder Pass</h3>
-              <p>For devs &amp; advocates shipping real things.</p>
-              <ul class="list">
-                <li>API keys (rate-limited)</li>
-                <li>Credential issuing sandbox</li>
-                <li>1 private assistant profile</li>
-              </ul>
-              <a class="btn primary" href="https://buy.stripe.com/9B68wOfP03ZueUYbY18IU03">Get Builder Pass</a>
-            </div>
-            <div class="panel alt" role="region" aria-labelledby="steward-pass">
-              <h3 id="steward-pass" style="margin-top:0">Steward Pass</h3>
-              <p>For orgs, clinics, shelters, and community stewards.</p>
-              <ul class="list">
-                <li>Higher limits &amp; audit exports</li>
-                <li>DDI casework workspace</li>
-                <li>Priority support</li>
-              </ul>
-              <a class="btn" href="https://buy.stripe.com/7sY28q6eq8fK148fad8IU04">Get Steward Pass</a>
-            </div>
-          </div>
-          <p class="tiny" style="margin-top:10px">Stripe links are live per your mapping. Swap anytime.</p>
-        </div>
-
-        <div class="panel" role="region" aria-labelledby="ai-diff">
-          <h2 id="ai-diff" class="head" style="font-size:28px">What’s different on .ai?</h2>
-          <ul class="list">
-            <li><strong>Focus:</strong> Identity + APIs + data models (not media hosting).</li>
-            <li><strong>Language:</strong> Plain talk for builders and caseworkers.</li>
-            <li><strong>Pledge:</strong> No surveillance, no resale, no “growth hacks.”</li>
-          </ul>
-          <div class="panel" style="margin-top:10px">
-            <h4 style="margin:0 0 6px 0">Roadmap Highlights</h4>
-            <ul class="list" id="roadmap">
-              <li>🔒 Encrypted case bundles (shareable with courts)</li>
-              <li>🧾 Verifiable receipts for testimony uploads</li>
-              <li>🧭 Assistant “ethics modes” (Court / Clinic / Outreach)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <h2 class="section" id="companion" style="margin-top:16px">COMPANION • Cedar-rooted AI</h2>
+    <section class="grid two">
+      <article class="panel alt">
+        <span class="tag">Dream → Blueprint</span>
+        <h3 class="head" style="font-size:22px;margin-top:6px">Turn beeps into builds</h3>
+        <p class="sub">You bring the spark. The Companion drafts schemas, copy, psalms, and code. Consent memory only.</p>
+      </article>
+      <article class="panel alt">
+        <span class="tag">Nation Tools</span>
+        <h3 class="head" style="font-size:22px;margin-top:6px">OpenMic • Dignity Wall</h3>
+        <p class="sub">Speak truth, stream to TV, receive SPX tips. Digital meets physical halls.</p>
+      </article>
     </section>
 
-    <div class="wrap"><div class="divider" role="separator"></div></div>
+    <div class="divider" role="separator"></div>
 
-    <!-- SPX COIN -->
-    <section class="wrap" id="spx" aria-labelledby="spx-title">
-      <div class="grid two">
-        <div class="panel alt">
-          <h2 id="spx-title" class="head" style="font-size:28px">SPX • The Cedar Ledger</h2>
-          <p class="sub">ERC-20 on Polygon. Transparent by default. Use SPX for donations, tips, and venue access — or pay fiat, no pressure.</p>
-          <div class="pillrow" style="margin-top:12px">
-            <a class="btn" href="/assets/spx-whitepaper.pdf" target="_blank" rel="noopener">Read SPX Whitepaper</a>
-            <a class="btn ghost" href="https://amoy.polygonscan.com/" target="_blank" rel="noopener">View Chain Explorer</a>
-          </div>
+    <!-- Developer docs slice -->
+    <h2 class="section" id="docs">BUILDERS • Simple APIs</h2>
+    <section class="grid two">
+      <article class="panel">
+        <h3 style="margin:6px 0 8px 0">Identity Oracle</h3>
+        <p class="sub">One identity, zero creep. QR-first, proof-portable credentials.</p>
+        <div class="code" aria-label="API example">
+POST /v1/credentials/issue
+GET  /v1/credentials/verify
         </div>
-        <div class="panel alt">
-          <h3 style="margin-top:0; display:flex; align-items:center; gap:10px"><span class="icon" aria-hidden="true"></span> Wallet (stub)</h3>
-          <p class="sub">Hook up MetaMask or WalletConnect here. We’ll never force-connect: your choice, your covenant.</p>
-          <div class="pillrow">
-            <button class="btn primary" id="walletBtn" type="button">Connect Wallet</button>
-            <button class="btn ghost" id="fundsBtn" type="button">Get Test POL (Amoy)</button>
-          </div>
-          <p class="tiny">Tip: Add your SPX contract later and we’ll surface balance + quick-tip actions.</p>
-        </div>
-      </div>
+      </article>
+      <article class="panel">
+        <h3 style="margin:6px 0 8px 0">Guardrails that matter</h3>
+        <ul class="list">
+          <li>Signed attestations, not vibes</li>
+          <li>Evidence fingerprints & receipts</li>
+          <li>Appeals outrank automation</li>
+          <li>Zero marketing pixels</li>
+        </ul>
+      </article>
     </section>
 
-    <div class="wrap"><div class="divider" role="separator"></div></div>
+    <div class="divider" role="separator"></div>
 
-    <!-- CONTACT -->
-    <section id="contact" class="wrap" aria-labelledby="contact-title">
-      <div class="grid two">
-        <form class="panel" action="https://formspree.io/f/xyzdaqzl" method="POST" novalidate>
-          <h2 id="contact-title" class="head" style="font-size:28px">Say hello</h2>
-          <p class="sub">Tell us what you’re building — or the harm you’re trying to prevent. We answer like humans.</p>
-          <label class="tiny" for="name">Your Name</label>
-          <input id="name" name="name" required placeholder="Jane Doe" style="margin:6px 0 12px 0; width:100%; padding:12px; border-radius:12px; border:1px solid #27365c; background:#0e1325; color:#eef6ff" />
-          <label class="tiny" for="email">Email</label>
-          <input id="email" name="email" type="email" required placeholder="you@example.com" style="margin:6px 0 12px 0; width:100%; padding:12px; border-radius:12px; border:1px solid #27365c; background:#0e1325; color:#eef6ff" />
-          <label class="tiny" for="message">Message</label>
-          <textarea id="message" name="message" required rows="5" placeholder="Quick note…" style="margin:6px 0 12px 0; width:100%; padding:12px; border-radius:12px; border:1px solid #27365c; background:#0e1325; color:#eef6ff"></textarea>
-          <!-- Honeypot -->
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-          <button class="btn primary" type="submit">Send</button>
-          <p class="tiny">Protected by Formspree. We don’t sell your info. Ever.</p>
-        </form>
-
-        <div class="panel alt" role="region" aria-labelledby="covenant">
-          <h3 id="covenant" style="margin-top:0">Fair Use Covenant</h3>
-          <p class="sub">We’ll fight for your dignity. We won’t fight for your spyware. If you sell people out, we’ll sell you nothing.</p>
-          <ul class="list">
-            <li>No scraping human pain for profit.</li>
-            <li>No targeted harm or harassment tooling.</li>
-            <li>Appeals welcome. Accountability first.</li>
-          </ul>
-        </div>
-      </div>
+    <!-- Pricing -->
+    <h2 class="section" id="pricing">ACCESS • Honest & Simple</h2>
+    <section class="grid two">
+      <article class="panel">
+        <h3 style="margin:0">Builder Pass</h3>
+        <p class="sub">For devs & advocates shipping real things.</p>
+        <ul class="list">
+          <li>API keys (rate-limited)</li>
+          <li>Credential issuing sandbox</li>
+          <li>1 private assistant profile</li>
+        </ul>
+        <a class="btn" href="https://buy.stripe.com/9B68wOfP03ZueUYbY18IU03">Get Builder Pass</a>
+      </article>
+      <article class="panel">
+        <h3 style="margin:0">Steward Pass</h3>
+        <p class="sub">For orgs, clinics, shelters, and community stewards.</p>
+        <ul class="list">
+          <li>Higher limits & audit exports</li>
+          <li>DDI casework workspace</li>
+          <li>Priority support</li>
+        </ul>
+        <a class="btn ghost" href="https://buy.stripe.com/7sY28q6eq8fK148fad8IU04">Get Steward Pass</a>
+      </article>
     </section>
 
-    <!-- PSALM -->
-    <section class="wrap" aria-label="Nation Psalm" style="margin-top:20px">
-      <div class="panel psalm">
-        Blessed is the one who walks not in phoniness, but stands beneath the cedars of the Lord.
-        Verify once, belong forever. Let the wires carry our hymn — code like prayer, truth like fire,
-        SPRAXXX rising from root to crown. Mucho respect. So it is done.
-      </div>
+    <div class="divider" role="separator"></div>
+
+    <!-- SPX -->
+    <h2 class="section" id="spx">SPX • The Cedar Ledger</h2>
+    <section class="grid two">
+      <article class="panel alt">
+        <p class="sub">ERC-20 on Polygon. Transparent by default. Use SPX for donations, tips, and venue access — or pay fiat, no pressure.</p>
+        <div class="pillrow">
+          <a class="btn" href="/assets/spx-whitepaper.pdf" target="_blank" rel="noopener">Read SPX Whitepaper</a>
+          <a class="btn ghost" href="https://amoy.polygonscan.com/" target="_blank" rel="noopener">Chain Explorer</a>
+        </div>
+        <p class="note">Add your contract later to surface wallet balance + quick-tip.</p>
+      </article>
+      <article class="panel alt">
+        <h3 style="margin:0 0 8px 0">Wallet (stub)</h3>
+        <div class="pillrow">
+          <button class="btn" id="walletBtn" type="button">Connect Wallet</button>
+          <button class="btn ghost" id="fundsBtn" type="button">Get Test POL (Amoy)</button>
+        </div>
+        <p class="sub">We’ll never force-connect. Your choice, your covenant.</p>
+      </article>
+    </section>
+
+    <div class="divider" role="separator"></div>
+
+    <!-- Contact -->
+    <h2 class="section" id="contact">CONTACT • Say hello</h2>
+    <section class="grid two">
+      <form class="panel" action="https://formspree.io/f/xyzdaqzl" method="POST" novalidate>
+        <label class="tag" for="name">Your Name</label>
+        <input id="name" name="name" required placeholder="Jane Doe"
+               style="margin:6px 0 12px 0;width:100%;padding:12px;border-radius:12px;border:1px solid var(--edge);background:#120f1c;color:#fff" />
+        <label class="tag" for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com"
+               style="margin:6px 0 12px 0;width:100%;padding:12px;border-radius:12px;border:1px solid var(--edge);background:#120f1c;color:#fff" />
+        <label class="tag" for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Quick note…"
+                  style="margin:6px 0 12px 0;width:100%;padding:12px;border-radius:12px;border:1px solid var(--edge);background:#120f1c;color:#fff"></textarea>
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+        <button class="btn" type="submit">Send</button>
+        <p class="tiny" style="margin-top:8px">Protected by Formspree. We don’t sell your info. Ever.</p>
+      </form>
+
+      <article class="panel alt">
+        <h3 style="margin-top:0">Fair Use Covenant</h3>
+        <ul class="list">
+          <li>No scraping human pain for profit.</li>
+          <li>No targeted harm or harassment tooling.</li>
+          <li>Appeals welcome. Accountability first.</li>
+        </ul>
+        <p class="note">We’ll fight for your dignity. We won’t fight for your spyware.</p>
+      </article>
+    </section>
+
+    <!-- Psalm -->
+    <section class="panel" style="margin-top:16px;font-style:italic;color:#e9e1ff;line-height:1.6">
+      Blessed is the one who walks not in phoniness, but stands beneath the cedars of the Lord.
+      Verify once, belong forever. Let the wires carry our hymn — code like prayer, truth like fire,
+      SPRAXXX rising from root to crown. Mucho respect. So it is done.
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <div class="wrap">
-      <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap">
-        <div class="tiny">© <span id="y"></span> SPRAXXX — Built with love and receipts.</div>
-        <div style="display:flex; gap:10px; flex-wrap:wrap">
-          <a class="tiny" href="/legal">Legal</a>
-          <a class="tiny" href="/privacy">Privacy</a>
-          <a class="tiny" href="/status">Status</a>
-        </div>
+  <footer>
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div class="tiny">© <span id="y"></span> SPRAXXX — Purple Noir • Brotherhood in Motion</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="tiny" href="/legal">Legal</a>
+        <a class="tiny" href="/privacy">Privacy</a>
+        <a class="tiny" href="/status">Status</a>
       </div>
-      <noscript><p class="tiny" style="margin-top:10px">JavaScript is off — the site still works. Wallet connect is disabled.</p></noscript>
+      <noscript><p class="tiny">JS is off — site works; wallet connect disabled.</p></noscript>
     </div>
   </footer>
 
   <script>
-    // current year
+    // Year
     document.getElementById('y').textContent = new Date().getFullYear();
 
     // Wallet connect stub
@@ -304,13 +318,6 @@
     document.getElementById('fundsBtn')?.addEventListener('click', () => {
       window.open('https://faucet.polygon.technology/', '_blank', 'noopener');
     });
-
-    // Optional SW (only registers if /sw.js exists)
-    if ('serviceWorker' in navigator){
-      fetch('/sw.js', {method:'HEAD'}).then(r => {
-        if (r.ok) navigator.serviceWorker.register('/sw.js').catch(()=>{});
-      }).catch(()=>{});
-    }
   </script>
 </body>
 </html>
