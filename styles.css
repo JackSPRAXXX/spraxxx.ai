@@ -1,0 +1,131 @@
+/* ------- SPRAXXX Cedar Noir v1 ------- */
+:root{
+  --bg:#0a0c0e;          /* darker base for contrast */
+  --panel:#0f1318;       /* card */
+  --card:#0c1116;        /* alt card */
+  --edge:#1d2a35;        /* border */
+  --ink:#eef6ff;         /* body text brighter */
+  --muted:#c2d2e6;       /* muted text brighter */
+  --accent:#ff3b3b;      /* ember */
+  --teal:#00ffc8;        /* nation neon */
+  --ring:#00ffc84a;
+  --radius:16px; --radius-notched:14px;
+  --shadow:0 12px 40px rgba(0,0,0,.35);
+  --max:1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(0,255,200,.10), transparent 55%),
+    radial-gradient(1000px 400px at 10% -20%, rgba(255,59,59,.06), transparent 60%),
+    var(--bg);
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+
+/* Top header */
+header{
+  position:sticky;top:0;z-index:10;
+  backdrop-filter: blur(8px);
+  background: color-mix(in oklab, var(--bg) 90%, transparent);
+  border-bottom:1px solid color-mix(in oklab, var(--edge) 75%, transparent);
+}
+.wrap{max-width:var(--max);margin:0 auto;padding:20px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.4px}
+.logo-badge{
+  width:34px;height:34px;border-radius:9px;
+  background:conic-gradient(from 200deg,#0d1217,#102029 45%,#0d1217);
+  border:1px solid var(--edge); box-shadow:var(--shadow);
+}
+
+/* Links / buttons */
+.navlinks{display:flex;gap:12px;flex-wrap:wrap}
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+.btn{
+  display:inline-flex;gap:10px;align-items:center;justify-content:center;
+  padding:12px 16px;border-radius:10px 14px 14px 14px; /* Nation notch */
+  border:1px solid var(--edge); background:#0f1720; color:var(--ink);
+  box-shadow:var(--shadow); transition:transform .06s ease, box-shadow .2s ease, filter .2s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{
+  background:linear-gradient(135deg,#142130 0%,#0e1622 100%);
+  border-color:#274253; box-shadow:0 0 0 6px var(--ring);
+  color:#eafffb;
+}
+.btn.ghost{background:transparent}
+.chip{
+  font-size:12px;padding:7px 11px;border-radius:10px 14px 14px 14px;
+  border:1px solid #274253;color:var(--muted);background:#0f1720;
+}
+
+/* Hero */
+.hero{padding:56px 20px 20px}
+.grid{display:grid;gap:18px}
+.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:900px){.two{grid-template-columns:1fr}}
+.head{font-size:clamp(28px,4.8vw,50px);line-height:1.05;margin:10px 0}
+.sub{color:var(--muted);font-size:clamp(15px,2vw,18px)}
+.kpis{display:flex;gap:14px;flex-wrap:wrap}
+.kpi{flex:1 1 160px;padding:12px 14px;border:1px dashed #2a3b48;border-radius:12px;color:#d8e9ff}
+
+/* Panels */
+.panel{
+  background:linear-gradient(180deg,var(--panel),#0c141a 70%);
+  border:1px solid var(--edge); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow);
+}
+.panel.alt{
+  background:linear-gradient(180deg,var(--card),#0b1318 70%);
+}
+
+/* Lists & code (higher contrast) */
+.list{display:grid;gap:10px}
+.list li{
+  background:#0e1820; border:1px solid #2b4252; color:#e9f3ff;
+  padding:12px 14px;border-radius:12px
+}
+.code{
+  font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  background:#08131a; border:1px solid #244153; color:#d7f7ff;
+  padding:14px;border-radius:12px;overflow:auto
+}
+
+/* Section divider as cedar grain */
+.divider{
+  height:2px;margin:24px 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(0,255,200,.20) 0 6px,
+      transparent 6px 12px
+    ),
+    linear-gradient(90deg,transparent,rgba(39,66,82,.8),transparent);
+}
+
+/* Psalm card */
+.notice, .psalm{
+  font-size:14px;line-height:1.6;color:#dff6ff;
+  background:#0b151b;border:1px solid #254253;padding:12px 14px;border-radius:14px
+}
+
+/* Footer */
+footer{padding:30px 20px;color:#b0c4da;border-top:1px solid #1a2430}
+
+/* Accessibility */
+:focus-visible{outline:none;box-shadow:0 0 0 4px var(--ring)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Light scheme (optional) */
+@media (prefers-color-scheme: light){
+  :root{--ink:#0a1b2e;--muted:#5e738a}
+  .panel,.panel.alt{background:#ffffff;border-color:#e4edf6}
+  .list li{background:#f5f9ff;border-color:#dbe7f4;color:#0e2236}
+  .btn{background:#eef6ff;color:#0a1b2e}
+  .btn.primary{background:#dffbff;border-color:#a7eff0}
+}
