@@ -5,11 +5,11 @@
   <title>SPRAXXX.ai — Human-First AI • Verified Identity</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="SPRAXXX.ai is the human-first AI stack: verified identity, private assistants, SPX coin, and a dignity-aware data model." />
-  <meta name="theme-color" content="#0b0c11" />
+  <meta name="theme-color" content="#0a0c0e" />
   <link rel="icon" href="/assets/favicon.png" />
+  <link rel="canonical" href="https://spraxxx.ai/" />
 
-  <!-- Canonical & OG -->
-  <link rel="canonical" href="https://spraxxx.ai/">
+  <!-- OG / Twitter -->
   <meta property="og:title" content="SPRAXXX.ai — Human-First AI • Verified Identity" />
   <meta property="og:description" content="Private by default. Verified by design. Tools for builders and stewards." />
   <meta property="og:type" content="website" />
@@ -20,82 +20,12 @@
   <meta name="twitter:description" content="Cedar-rooted AI. Verify once, belong forever." />
   <meta name="twitter:image" content="/assets/og-ai.jpg" />
 
-  <!-- Security hints (advisory for static hosting) -->
-  <meta http-equiv="x-content-type-options" content="nosniff">
-  <meta http-equiv="x-frame-options" content="SAMEORIGIN">
+  <!-- Security (advisory for static hosting) -->
+  <meta http-equiv="x-content-type-options" content="nosniff" />
+  <meta http-equiv="x-frame-options" content="SAMEORIGIN" />
 
-  <style>
-    /* ------- Theme ------- */
-    :root{
-      --bg:#0b0c11; --panel:#111422; --ink:#e9f1ff; --muted:#a2b0c6;
-      --brand:#90f2ff; --brand2:#8cffc1; --ring:#90f2ff55; --danger:#ff6b6b;
-      --radius:16px; --shadow:0 12px 40px rgba(0,0,0,.35); --edge:#1f2946;
-      --max:1100px;
-    }
-    @media (prefers-color-scheme: light){
-      :root{ --bg:#f7fbff; --panel:#ffffff; --ink:#0a1b2e; --muted:#5a6b82; --edge:#dfe7f3 }
-      body{ background:#f7fbff }
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
-      color:var(--ink);
-      background:
-        radial-gradient(1200px 600px at 70% -10%, rgba(144,242,255,.12), transparent 60%),
-        var(--bg);
-      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-    }
-    a{color:var(--brand); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:var(--max); margin:0 auto; padding:20px}
-    header{position:sticky; top:0; backdrop-filter: blur(8px);
-      background: color-mix(in oklab, var(--bg) 85%, transparent);
-      border-bottom:1px solid color-mix(in oklab, var(--edge) 70%, transparent);
-      z-index:10}
-    .nav{display:flex; align-items:center; justify-content:space-between; gap:12px}
-    .logo{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.5px}
-    .logo-badge{width:34px; height:34px; border-radius:9px;
-      background:linear-gradient(135deg, var(--brand), var(--brand2)); box-shadow:var(--shadow)}
-    .navlinks{display:flex; gap:12px; flex-wrap:wrap}
-    .btn{display:inline-flex; gap:10px; align-items:center; justify-content:center; padding:12px 16px;
-      border-radius:12px; border:1px solid #243050; background:#12162a; color:#e9f1ff; box-shadow: var(--shadow);
-      transition: transform .06s ease, box-shadow .2s ease}
-    .btn:hover{transform: translateY(-1px)}
-    .btn.primary{background:linear-gradient(135deg, #182038 0%, #101524 100%); border:1px solid #2a3a64; box-shadow: 0 0 0 6px var(--ring); color:#dff7ff}
-    .btn.ghost{background:transparent; border:1px solid #243050}
-    .chip{font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid #22304e; color:var(--muted)}
-    .hero{padding:60px 20px 20px}
-    .grid{display:grid; gap:18px}
-    .two{grid-template-columns: repeat(2, minmax(0,1fr))}
-    @media (max-width:900px){ .two{grid-template-columns:1fr} }
-    .panel{background: linear-gradient(180deg, #121627 0%, #0f1322 100%); border:1px solid var(--edge); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
-    .panel.alt{background: linear-gradient(180deg, #0f1221 0%, #0b0f1d 100%)}
-    .head{font-size: clamp(26px, 4.6vw, 48px); line-height:1.05; margin:10px 0}
-    .sub{color:var(--muted); font-size: clamp(14px, 2.2vw, 18px)}
-    .kpis{display:flex; gap:14px; flex-wrap:wrap}
-    .kpi{flex:1 1 160px; padding:12px 14px; border:1px dashed #263155; border-radius:12px; color:#c6d7ff}
-    .pillrow{display:flex; gap:8px; flex-wrap:wrap; margin:10px 0}
-    .list{display:grid; gap:10px}
-    .list li{background:#0e1325; border:1px solid #1e2b4d; padding:12px 14px; border-radius:12px}
-    .code{font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace; background:#0b0f1e; border:1px solid #1a2647; padding:14px; border-radius:12px; overflow:auto}
-    .divider{height:1px; background: linear-gradient(90deg, transparent, #29406c, transparent); margin:24px 0}
-    footer{padding:30px 20px; color:#9fb2d8; border-top:1px solid #1a2140}
-    .tiny{font-size:12px; color:#8ea2c9}
-    .icon{width:18px; height:18px; display:inline-block; border-radius:4px; background: linear-gradient(135deg, var(--brand), var(--brand2)); box-shadow: inset 0 0 0 2px #0e1430, 0 0 0 1px #172046}
-    .notice{font-size:13px; color:#aab7d6; background:#0c1122; border:1px solid #1c2b54; padding:10px 12px; border-radius:12px}
-
-    /* Accessibility: focus + motion */
-    :focus-visible{outline:none; box-shadow:0 0 0 4px var(--ring)}
-    @media (prefers-reduced-motion: reduce){
-      *{animation:none!important; transition:none!important}
-    }
-
-    /* Skip link */
-    .skip{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
-    .skip:focus{left:16px; top:16px; width:auto; height:auto; padding:8px 12px; background:#12162a; color:#dff7ff; border-radius:8px; border:1px solid #2a3a64}
-  </style>
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -130,7 +60,7 @@
   </header>
 
   <main id="main">
-    <!-- Hero -->
+    <!-- HERO -->
     <section class="wrap hero" aria-labelledby="hero-title">
       <div class="grid two">
         <div class="panel" role="region" aria-label="Hero pitch">
@@ -188,7 +118,7 @@
 
     <div class="wrap"><div class="divider" role="separator"></div></div>
 
-    <!-- Developer First -->
+    <!-- DEV DOCS -->
     <section id="docs" class="wrap" aria-labelledby="build-title">
       <div class="grid two">
         <div class="panel">
@@ -220,7 +150,7 @@
 
     <div class="wrap"><div class="divider" role="separator"></div></div>
 
-    <!-- Pricing -->
+    <!-- PRICING -->
     <section id="pricing" class="wrap" aria-labelledby="pricing-title">
       <div class="grid two">
         <div class="panel">
@@ -272,7 +202,7 @@
 
     <div class="wrap"><div class="divider" role="separator"></div></div>
 
-    <!-- SPX Coin -->
+    <!-- SPX COIN -->
     <section class="wrap" id="spx" aria-labelledby="spx-title">
       <div class="grid two">
         <div class="panel alt">
@@ -297,22 +227,20 @@
 
     <div class="wrap"><div class="divider" role="separator"></div></div>
 
-    <!-- Contact -->
+    <!-- CONTACT -->
     <section id="contact" class="wrap" aria-labelledby="contact-title">
       <div class="grid two">
         <form class="panel" action="https://formspree.io/f/xyzdaqzl" method="POST" novalidate>
           <h2 id="contact-title" class="head" style="font-size:28px">Say hello</h2>
           <p class="sub">Tell us what you’re building — or the harm you’re trying to prevent. We answer like humans.</p>
           <label class="tiny" for="name">Your Name</label>
-          <input id="name" name="name" required placeholder="Jane Doe" style="margin:6px 0 12px 0; width:100%; padding:12px; border-radius:12px; border:1px solid #27365c; background:#0e1325; color:#e9f1ff" />
+          <input id="name" name="name" required placeholder="Jane Doe" style="margin:6px 0 12px 0; width:100%; padding:12px; border-radius:12px; border:1px solid #27365c; background:#0e1325; color:#eef6ff" />
           <label class="tiny" for="email">Email</label>
-          <input id="email" name="email" type="email" required placeholder="you@example.com" style="margin:6px 0 12px 0; width:100%; padding:12px; border-radius:12px; border:1px solid #27365c; background:#0e1325; color:#e9f1ff" />
+          <input id="email" name="email" type="email" required placeholder="you@example.com" style="margin:6px 0 12px 0; width:100%; padding:12px; border-radius:12px; border:1px solid #27365c; background:#0e1325; color:#eef6ff" />
           <label class="tiny" for="message">Message</label>
-          <textarea id="message" name="message" required rows="5" placeholder="Quick note…" style="margin:6px 0 12px 0; width:100%; padding:12px; border-radius:12px; border:1px solid #27365c; background:#0e1325; color:#e9f1ff"></textarea>
-
+          <textarea id="message" name="message" required rows="5" placeholder="Quick note…" style="margin:6px 0 12px 0; width:100%; padding:12px; border-radius:12px; border:1px solid #27365c; background:#0e1325; color:#eef6ff"></textarea>
           <!-- Honeypot -->
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
           <button class="btn primary" type="submit">Send</button>
           <p class="tiny">Protected by Formspree. We don’t sell your info. Ever.</p>
         </form>
@@ -329,9 +257,9 @@
       </div>
     </section>
 
-    <!-- Psalm / Manifest -->
+    <!-- PSALM -->
     <section class="wrap" aria-label="Nation Psalm" style="margin-top:20px">
-      <div class="panel" style="font-style:italic; color:#cfe; line-height:1.6">
+      <div class="panel psalm">
         Blessed is the one who walks not in phoniness, but stands beneath the cedars of the Lord.
         Verify once, belong forever. Let the wires carry our hymn — code like prayer, truth like fire,
         SPRAXXX rising from root to crown. Mucho respect. So it is done.
@@ -357,9 +285,8 @@
     // current year
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Wallet connect stub (safe no-op)
-    const walletBtn = document.getElementById('walletBtn');
-    walletBtn?.addEventListener('click', async () => {
+    // Wallet connect stub
+    document.getElementById('walletBtn')?.addEventListener('click', async () => {
       if (!window.ethereum){
         alert('MetaMask not found. Install at metamask.io or use a WalletConnect-enabled browser.');
         return;
@@ -378,7 +305,7 @@
       window.open('https://faucet.polygon.technology/', '_blank', 'noopener');
     });
 
-    // Optional: register service worker if /sw.js exists (no error if missing)
+    // Optional SW (only registers if /sw.js exists)
     if ('serviceWorker' in navigator){
       fetch('/sw.js', {method:'HEAD'}).then(r => {
         if (r.ok) navigator.serviceWorker.register('/sw.js').catch(()=>{});
