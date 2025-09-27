@@ -15,17 +15,16 @@
   <meta property="og:image" content="/assets/og-ai.jpg" />
 
   <style>
-    /* ===== SPRAXXX.ai — Purple Noir (inspired by .TV layout, purple accent) ===== */
     :root{
-      --bg:#0b0a10;            /* black-violet base */
-      --panel:#0f0d17;         /* card panel */
-      --edge:#1a1530;          /* borders */
-      --ink:#ffffff;           /* primary text */
-      --muted:#bdb7d6;         /* secondary text */
-      --purple:#8a5cff;        /* royal purple accent */
-      --purple-2:#b08cff;      /* soft purple */
-      --neon:#a86bff;          /* neon glow */
-      --danger:#ff3b3b;        /* optional red */
+      --bg:#0b0a10;
+      --panel:#0f0d17;
+      --edge:#1a1530;
+      --ink:#ffffff;
+      --muted:#bdb7d6;
+      --purple:#8a5cff;
+      --purple-2:#b08cff;
+      --neon:#a86bff;
+      --danger:#ff3b3b;
       --r:14px;
       --shadow:0 12px 40px rgba(0,0,0,.40);
       --ring:0 0 0 6px rgba(138,92,255,.22);
@@ -52,7 +51,6 @@
     .two{grid-template-columns:repeat(2,minmax(0,1fr))}
     @media (max-width:900px){.two{grid-template-columns:1fr}}
 
-    /* Header: banner feel like .TV but sleeker */
     header{
       position:sticky;top:0;z-index:10;
       backdrop-filter:blur(6px);
@@ -71,38 +69,26 @@
     .btn.ghost{background:transparent;color:#fff;border-color:var(--edge)}
     .btn:hover{box-shadow:var(--ring)}
 
-    /* Section headers like .TV banners */
     h2.section{margin:0 0 10px;padding:12px 16px;font-size:14px;letter-spacing:.6px;
       background:linear-gradient(180deg,#120f1c,#0f0c17);border:1px solid var(--edge);border-radius:12px;color:#dcd3ff}
 
-    /* Cards / panels */
     .panel{background:linear-gradient(180deg,var(--panel),#0c0a14 70%);border:1px solid var(--edge);border-radius:var(--r);padding:16px;box-shadow:var(--shadow)}
     .panel.alt{background:linear-gradient(180deg,#100d1a,#0d0a15 70%)}
     .head{font-size:clamp(26px,4.8vw,50px);line-height:1.06;margin:8px 0}
     .sub{color:var(--muted);font-size:clamp(15px,2vw,18px)}
     .pillrow{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
     .tag{display:inline-block;font-size:12px;padding:6px 10px;border:1px solid var(--edge);border-radius:999px;color:#d8cffc;background:#120f1c}
-
-    /* Lists & code */
     .list{display:grid;gap:10px}
     .list li{background:#110e1b;border:1px solid #2a2242;border-radius:12px;padding:12px 14px;color:#f2ecff}
     .code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;background:#0e0b16;border:1px solid #2a2242;border-radius:12px;padding:14px;color:#e9e1ff;overflow:auto}
-
-    /* Divider with “stage lights” */
     .divider{height:2px;margin:22px 0;
       background:
         repeating-linear-gradient(90deg, rgba(138,92,255,.35) 0 10px, transparent 10px 20px),
         linear-gradient(90deg, transparent, rgba(176,140,255,.70), transparent);}
-
-    /* Track-of-week style banners (re-usable) */
     .banner{background:linear-gradient(180deg,#a86bff,#8a5cff);color:#120f1c;text-align:center;font-weight:900;padding:.9rem 1rem;border:1px solid #6f45ff;border-radius:12px}
     .note{font-size:13px;color:#d6ccff;background:#120f1c;border:1px solid #2a2242;padding:10px 12px;border-radius:12px}
-
-    /* Footer */
     footer{padding:26px 20px;color:#c9c2e6;border-top:1px solid rgba(255,255,255,.08)}
     .tiny{font-size:12px;color:#b8b0da}
-
-    /* Focus & motion */
     :focus-visible{outline:none;box-shadow:0 0 0 4px rgba(138,92,255,.35)}
     @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
   </style>
@@ -141,7 +127,7 @@
 
     <div class="divider" role="separator"></div>
 
-    <!-- Identity / Companion cards (TV-like grid) -->
+    <!-- Identity / Companion cards -->
     <h2 class="section" id="identity">IDENTITY • Verify once, belong forever</h2>
     <section class="grid two">
       <article class="panel">
@@ -221,6 +207,21 @@ GET  /v1/credentials/verify
       </article>
     </section>
 
+    <!-- SPRAXXX Verified Credential panel -->
+    <section class="grid two" style="margin-top:16px">
+      <article class="panel">
+        <h3 style="margin:0">SPRAXXX Verified Credential</h3>
+        <p class="sub">Instant identity verification. One payment, one scan, one QR code — backed by Stripe ID verification.</p>
+        <ul class="list">
+          <li>Delivered instantly as QR + PDF certificate</li>
+          <li>Secure, Stripe-backed verification</li>
+        </ul>
+        <a class="btn" href="https://buy.stripe.com/eVq3cu9qC8fK6os3rv8IU07" target="_blank" rel="noopener noreferrer">
+          Get Verified Credential
+        </a>
+      </article>
+    </section>
+
     <div class="divider" role="separator"></div>
 
     <!-- SPX -->
@@ -296,10 +297,8 @@ GET  /v1/credentials/verify
   </footer>
 
   <script>
-    // Year
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Wallet connect stub
     document.getElementById('walletBtn')?.addEventListener('click', async () => {
       if (!window.ethereum){
         alert('MetaMask not found. Install at metamask.io or use a WalletConnect-enabled browser.');
@@ -314,7 +313,6 @@ GET  /v1/credentials/verify
       }
     });
 
-    // Faucet helper
     document.getElementById('fundsBtn')?.addEventListener('click', () => {
       window.open('https://faucet.polygon.technology/', '_blank', 'noopener');
     });
