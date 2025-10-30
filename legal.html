@@ -1,97 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
-  <title>Legal • SPRAXXX.ai</title>
+  <title>SPRAXXX Legal — Privacy Policy & User Agreement</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Legal terms and conditions for SPRAXXX.ai — verified identity, dignity-aware AI, and Brotherhood in Motion." />
-  <meta name="theme-color" content="#0b0a10" />
-  <link rel="canonical" href="https://spraxxx.ai/legal" />
-  <link rel="icon" href="/assets/favicon.png" />
-  <link rel="apple-touch-icon" href="/assets/icon-180.png" />
+  <meta name="description" content="SPRAXXX Legal — Privacy Policy and User Agreement. Verified identity, Mail-Safe™ inbox, dignity-first policies, and human override governance." />
+  <meta name="robots" content="index,follow" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b0c11" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://spraxxx.com/legal" />
+  <meta name="referrer" content="no-referrer" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SPRAXXX Legal — Privacy Policy & User Agreement" />
+  <meta property="og:description" content="Verify once. Live free forever. SPRAXXX protects your identity, dignity, and digital sovereignty." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://spraxxx.com/legal" />
+  <meta property="og:image" content="https://spraxxx.com/assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SPRAXXX Legal — Privacy Policy & User Agreement" />
+  <meta name="twitter:description" content="Privacy. Dignity. Verified Brotherhood. SPRAXXX protects its citizens." />
+  <meta name="twitter:image" content="https://spraxxx.com/assets/og.jpg" />
+
+  <!-- Icons -->
+  <link rel="icon" href="/assets/favicon.png" sizes="32x32" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+
   <style>
     :root{
-      --bg:#0b0a10;--ink:#fff;--muted:#bdb7d6;
-      --purple:#8a5cff;--edge:#1a1530;--panel:#100d1a;
-      --r:14px;--shadow:0 12px 40px rgba(0,0,0,.4);
-      --max:960px;
+      --bg:#0b0c11; --panel:#0f1220; --ink:#e9f1ff; --muted:#9fb0c8;
+      --brand:#90f2ff; --brand2:#8cffc1; --line:#1c2748;
+      --radius:16px; --max:1120px; --ring:0 0 0 3px rgba(144,242,255,.35);
     }
+    *{box-sizing:border-box}
+    html,body{height:100%}
     body{
-      margin:0;
+      margin:0;color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 70% -10%, #192140 0%, transparent 60%),
+        radial-gradient(900px 480px at 10% 120%, #112033 0%, transparent 60%),
+        var(--bg);
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
-      color:var(--ink);
-      background:var(--bg);
-      -webkit-font-smoothing:antialiased;
+      -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
     }
-    main{max-width:var(--max);margin:0 auto;padding:40px 20px;line-height:1.7}
-    h1,h2,h3{font-weight:700}
-    h1{font-size:clamp(28px,5vw,44px);margin-bottom:10px;color:var(--purple)}
-    h2{margin-top:40px;font-size:20px;color:#dcd3ff}
-    p{margin:10px 0;color:var(--muted)}
-    a{color:var(--purple)}
-    .panel{background:linear-gradient(180deg,var(--panel),#0c0a14 70%);
-      border:1px solid var(--edge);border-radius:var(--r);padding:24px;box-shadow:var(--shadow)}
-    footer{margin-top:60px;padding:20px;color:#bdb7d6;font-size:13px;text-align:center;border-top:1px solid rgba(255,255,255,.08)}
+    a{color:var(--brand);text-decoration:none;font-weight:600}
+    a:hover{text-decoration:underline}
+    a:focus-visible{outline:none;box-shadow:var(--ring)}
+    header{position:sticky;top:0;z-index:20;backdrop-filter:saturate(150%) blur(10px);
+      background:linear-gradient(180deg,rgba(11,12,17,.75),rgba(11,12,17,.35));border-bottom:1px solid var(--line)}
+    .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.4px}
+    .badge{width:28px;height:28px;border-radius:9px;box-shadow:0 0 0 1px #0b0c11 inset;
+      background:conic-gradient(from 120deg at 50% 50%,var(--brand),var(--brand2),var(--brand))}
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+    main{padding:40px 0}
+    h1{font-size:clamp(28px,5vw,48px);margin:0 0 10px}
+    h2{font-size:22px;margin:24px 0 10px}
+    h3{font-size:18px;margin:18px 0 8px}
+    .section{margin:32px 0;padding:20px;background:linear-gradient(180deg,#11152a,#0d1020);
+      border:1px solid var(--line);border-radius:var(--radius)}
+    ul{margin:0 0 0 20px}
+    .meta{color:var(--muted);font-size:14px}
+    footer{padding:30px 0;color:var(--muted);border-top:1px solid var(--line);text-align:center}
+    .skip-link{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{left:16px;top:12px;width:auto;height:auto;background:#13182a;color:#fff;
+      padding:8px 12px;border-radius:10px;border:1px solid var(--line);z-index:1000}
+    @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
   </style>
 </head>
+
 <body>
-  <main>
-    <div class="panel">
-      <h1>Legal &amp; Terms of Service</h1>
-      <p>Last updated: <strong>October&nbsp;2025</strong></p>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header role="banner">
+    <div class="wrap bar">
+      <div class="logo"><span class="badge" aria-hidden="true"></span><span>SPRAXXX</span></div>
+      <nav aria-label="Top nav">
+        <a href="https://spraxxx.com">Home</a>
+        <a href="https://spraxxx.tv" target="_blank" rel="noopener">.tv</a>
+        <a href="https://spraxxx.ai" target="_blank" rel="noopener">.ai</a>
+        <a href="https://spraxxx.net" target="_blank" rel="noopener">.net</a>
+      </nav>
+    </div>
+  </header>
 
-      <h2>1. Purpose</h2>
-      <p>SPRAXXX.ai provides identity-verified artificial-intelligence tools, creative collaboration platforms, and related digital services for the SPRAXXX Nation. All access to these services is conditioned upon verified human identity and adherence to our dignity-first covenant.</p>
+  <main id="main" class="wrap">
+    <h1>Legal — Privacy Policy & User Agreement</h1>
+    <p class="meta">Effective October 2025 · Jurisdiction: Ontario, Canada · Contact: <a href="mailto:legal@spraxxx.com">legal@spraxxx.com</a></p>
 
-      <h2>2. Acceptance of Terms</h2>
-      <p>By accessing any SPRAXXX domain (.ai • .com • .tv • .net • .xxx) you agree to these terms, our Privacy Policy, and the Fair-Use Covenant. If you do not agree, do not use the services.</p>
-
-      <h2>3. Identity Verification</h2>
-      <p>All paid or credentialed access flows through our secure partner <strong>Stripe Identity</strong>. By completing verification you consent to Stripe’s processing of identification data under their privacy terms. SPRAXXX stores only the verification token necessary to issue and validate your credential; no raw ID documents are kept on our servers.</p>
-
-      <h2>4. Licenses &amp; Ownership</h2>
-      <p>All content, code, and designs under the SPRAXXX name and its derivatives are owned by <strong>SPRAXXX Nation</strong> and licensed for personal or organizational use under the <strong>Divine Court License</strong>. Redistribution, resale, or misrepresentation of the brand without written consent is prohibited.</p>
-
-      <h2>5. Fair Use Covenant</h2>
+    <!-- PRIVACY POLICY -->
+    <section class="section" id="privacy">
+      <h2>Privacy Policy</h2>
+      <p>SPRAXXX verifies identity, not intimacy. We protect signal, not secrets. Every verified alias is yours alone. No resale. No surveillance. No hidden analytics.</p>
+      <h3>Information We Collect</h3>
       <ul>
-        <li>No scraping or resale of human data.</li>
-        <li>No use of SPRAXXX systems for harassment, exploitation, or surveillance.</li>
-        <li>No automation that impersonates verified humans.</li>
-        <li>Appeals outrank automation — disputes are reviewed by humans.</li>
+        <li>Verification Data (via Stripe Identity)</li>
+        <li>Alias &amp; Contact information</li>
+        <li>Payment Records (processed securely by Stripe)</li>
+        <li>Minimal Technical Logs for abuse prevention</li>
+        <li>Communications you choose to send us</li>
+      </ul>
+      <p>We do <strong>not</strong> sell, trade, rent, or license data. No ads, cookies, or trackers.</p>
+
+      <h3>How We Use Data</h3>
+      <ul>
+        <li>Verify and issue your SPRAXXX Key / alias</li>
+        <li>Provide Mail-Safe™, VPN, receipts, and support</li>
+        <li>Detect misuse or fraud</li>
       </ul>
 
-      <h2>6. Payments &amp; Refunds</h2>
-      <p>All transactions are processed through Stripe on behalf of SPRAXXX Nation. Verification payments are final once the credential has been issued. Refund requests prior to issuance may be reviewed case-by-case via <a href="mailto:billing@spraxxx.com">billing@spraxxx.com</a>.</p>
+      <h3>Security</h3>
+      <p>All systems use TLS 1.3+, isolated servers (“Sad-Black”), and cryptographic verification (BLAKE3 / Ed25519). Sensitive data is encrypted and audited.</p>
 
-      <h2>7. Liability</h2>
-      <p>Services are provided “as is.” We make no warranty of uninterrupted availability. SPRAXXX Nation shall not be liable for indirect or consequential damages arising from service use or data interruption.</p>
+      <h3>Human Override</h3>
+      <p>If a key or alias is compromised, SPRAXXX may revoke or restore access after verified review by a human operator.</p>
 
-      <h2>8. Data Protection</h2>
-      <p>We maintain minimal personal data. Verified identifiers are stored with encryption and purged when no longer required for active credential validation. You may request deletion by emailing <a href="mailto:privacy@spraxxx.com">privacy@spraxxx.com</a>.</p>
+      <h3>Your Rights</h3>
+      <ul>
+        <li>Access or delete stored data</li>
+        <li>Revoke consent or end your alias</li>
+        <li>Request human review of automated decisions</li>
+      </ul>
 
-      <h2>9. Governing Law</h2>
-      <p>These terms are governed by the laws of the Province of Ontario, Canada, and applicable federal law.</p>
+      <h3>Retention &amp; Jurisdiction</h3>
+      <p>Records are kept per Canadian law (≈6 years). Operations follow Ontario and GDPR-aligned standards.</p>
 
-      <h2>10. Contact</h2>
-      <p>For legal correspondence or service of process:<br/>
-      <strong>SPRAXXX Nation / Legal Dept</strong><br/>
-      P.O. Box 23 • Lancaster ON K0C 1N0 • Canada<br/>
-      <a href="mailto:legal@spraxxx.com">legal@spraxxx.com</a></p>
+      <h3>Updates</h3>
+      <p>Any change will be timestamped here. Continued use means acceptance.</p>
+    </section>
 
-      <h2>11. Amendment</h2>
-      <p>We may update these terms to reflect law, technology, or service changes. Updates take effect upon posting. Continued use constitutes acceptance.</p>
+    <!-- USER AGREEMENT -->
+    <section class="section" id="terms">
+      <h2>User Agreement (Terms of Use)</h2>
 
-      <h2>12. Closing Covenant</h2>
-      <p><em>We serve identity, dignity, and community. Technology follows covenant — never the reverse.</em></p>
-    </div>
+      <h3>1. Acceptance</h3>
+      <p>Using a SPRAXXX account means you agree to these terms. If not, discontinue immediately.</p>
+
+      <h3>2. Verified Accounts</h3>
+      <p>Each alias = one verified human. Impersonation or duplication may result in suspension.</p>
+
+      <h3>3. Services &amp; Payments</h3>
+      <ul>
+        <li>Verification Fee: $50 one-time per verified email</li>
+        <li>Optional subscriptions (Citizen, Creator, Org)</li>
+        <li>Payments handled by Stripe; no card data stored</li>
+        <li>Refunds possible within 30 days if service unused</li>
+      </ul>
+
+      <h3>4. Acceptable Use</h3>
+      <ul>
+        <li>No unlawful, harassing, or deceptive acts</li>
+        <li>No network exploitation or spam</li>
+        <li>Respect others’ intellectual property</li>
+      </ul>
+
+      <h3>5. Termination &amp; Revocation</h3>
+      <p>SPRAXXX may suspend or revoke for violations or identity disputes. Users can terminate anytime via <a href="mailto:support@spraxxx.com">support@spraxxx.com</a>.</p>
+
+      <h3>6. Liability Limit</h3>
+      <p>Services are provided “as-is.” Liability is limited to fees paid in the last 12 months.</p>
+
+      <h3>7. Disputes &amp; Human Review</h3>
+      <p>Disputes first go through Human Override mediation; unresolved cases fall under Ontario law.</p>
+
+      <h3>8. Intellectual Property</h3>
+      <p>All branding and code belong to Maple / SPRAXXX Network. Reuse only with written permission.</p>
+
+      <h3>9. AI Disclosure</h3>
+      <p>SPRAXXX uses limited AI to assist with moderation and routing. No personal data is sold or used for external model training. All AI actions are logged and reviewable.</p>
+
+      <h3>10. Changes</h3>
+      <p>Terms may update periodically; continuing use implies consent to new versions.</p>
+    </section>
   </main>
 
-  <footer>
-    © <span id="y"></span> SPRAXXX Nation • All Rights Reserved
+  <footer role="contentinfo">
+    <nav aria-label="Legal">
+      <a href="#privacy">Privacy Policy</a> · <a href="#terms">User Agreement</a>
+    </nav>
+    <p>© <span id="year"></span> SPRAXXX — enough of their sh*t, it’s our turn.</p>
   </footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
